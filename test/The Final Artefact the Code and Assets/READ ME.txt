@@ -1,5 +1,0 @@
-Start the game by clicking on the Final_Artefact/START_GAME.exe file
-
-Assets can befound in the Final_Artefact/assets folder
-
-Code can be found in the "Code" folder

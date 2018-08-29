@@ -91,7 +91,7 @@ void PlayerRight::tick() {
 		appearance.y -= (int)sinus;
 	}
 
-	//Decrease height after jump
+	//Decrease height after jumpp
 	if ((curr_state[1] != JUMP) && (heightAboveTheGround > 0)) {
 		heightAboveTheGround -= 1;
 		if (!height_stack.empty()) {
