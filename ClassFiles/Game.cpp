@@ -11,7 +11,7 @@ Game::Game(bool fullscreen) {
 	runningFlag = false;
 	restartFlag = false;
 
-	//Setting up Window Singleton
+	//Setting up Window Singletonn
 	Window* window = Window::getInstance();
 
 	if (!window->setFullscreen(fullscreen)) {
