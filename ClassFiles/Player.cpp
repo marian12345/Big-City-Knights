@@ -13,7 +13,7 @@ Player::Player(bool headLeft){
 
 	//Setting up Size, Position, States, Direction in which the Player heads, ticked (same as PlayerLeft)   
 	appearance.x = 50;
-	appearance.y = window_size_h - (window_size_h / 4);
+	appearance.y = window_size_h - (window_size_h / 5);
 	appearance.w = 128;
 	appearance.h = 128;
 	this->headLeft = headLeft;

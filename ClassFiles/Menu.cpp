@@ -193,18 +193,23 @@ bool Menu::loadMedia() {
 		}
 		//Place Control textures
 		if ((menu_items.at(i)->getType().compare("CONTROLSTX") == 0)) {
+			//X-Coordinate left Controls Texture
 			menu_items.at(i)->setX(((Window::getInstance()->getWindowSizeW() / 2) - menu_items.at(i)->getW())/2);
-			menu_items.at(i)->setY(menu_items.at(2)->getY() + menu_items.at(2)->getH());
+			//X-Coordinate for right Controls Texture
 			if (i >= menu_items.size() - 2) {
 				int tmp = (Window::getInstance()->getWindowSizeW() / 2) + menu_items.at(i)->getW();
 				tmp = (Window::getInstance()->getWindowSizeW() - tmp)/2;
 				tmp += Window::getInstance()->getWindowSizeW() / 2;
 				menu_items.at(i)->setX(tmp);
 			}
+			//Y-Coordinate for both textures
+			int y = (Window::getInstance()->getWindowSizeH() - menu_items.at(2)->getY())/2;
+			y = y - (menu_items.at(i)->getH() / 2);
+			menu_items.at(i)->setY(y + menu_items.at(2)->getY());
 		}
 	}
 
-	//Load later used menu items
+	//Load later used menu items (Resume and Restart)
 	for (int i = 0; i < unused_menu_items.size(); i++) {
 		if (!unused_menu_items.at(i)->loadMedia()) {
 			printf("Failed to load menu item.\n");
