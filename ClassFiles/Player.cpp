@@ -21,6 +21,7 @@ Player::Player(bool headLeft){
 		spritesheets[i] = NULL;
 	}
 	blocking = false;
+	jumping = false;
 	ticked = 0;
 	heightAboveTheGround = 0;
 	curr_state[0] = 0;
@@ -199,7 +200,7 @@ void Player::moveX(bool caused_by_collision, int distance) {
 
 void Player::changeStateTo(int state) {
 	//Making sure that HURT and JUMP can not be interrupted
-	if ((curr_state[1] != HURT) && (curr_state[1] != JUMP)) {
+	if ((curr_state[1] != HURT)){
 		if ((state == JUMP) && (heightAboveTheGround > 0)) {}
 		/*It has to be possible to stab/throw a bottle while walking, 
 			therefore WALK can not interrupt STAB/THROWBOTTLE*/

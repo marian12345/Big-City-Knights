@@ -48,9 +48,10 @@ void PlayerRight::checkInput() {
 
 	//Up Button Pressed
 	if (currentKeyStates[SDL_SCANCODE_UP]) {
-		if (curr_state[1] != JUMP) {
+		if ((curr_state[1] != JUMP) && (jumping == false) && (heightAboveTheGround <= 0)) {
 			Mixer::getInstance()->play(Mixer::JUMP);
 			changeStateTo(JUMP);
+			jumping = true;
 		}
 	}
 
@@ -82,17 +83,21 @@ void PlayerRight::tick() {
 
 	//JUMPING
 	//Increase height if jumped
-	if ((curr_state[1] == JUMP) && (heightAboveTheGround < 23)) {
+	int heightOfJump = 23;
+	if ((jumping == true) && (heightAboveTheGround < heightOfJump)) {
 		float PI = 3.14159265;
 		heightAboveTheGround += 1;
-		float sinus = sin((float)heightAboveTheGround*(0.5*PI) / 23);
+		float sinus = sin((float)heightAboveTheGround*(0.5*PI) / heightOfJump);
 		sinus = ((1 - sinus) * 10) + 3;
 		height_stack.push((int)sinus);
 		appearance.y -= (int)sinus;
 	}
+	else if (heightAboveTheGround >= heightOfJump) {
+		jumping = false;
+	}
 
 	//Decrease height after jumpp
-	if ((curr_state[1] != JUMP) && (heightAboveTheGround > 0)) {
+	if ((jumping == false) && (heightAboveTheGround > 0)) {
 		heightAboveTheGround -= 1;
 		if (!height_stack.empty()) {
 			int tmp = height_stack.top();

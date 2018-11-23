@@ -33,6 +33,7 @@ class Player : public AbstractTexture, public Observer, public LevelElementInter
 		int ticked;
 		bool headLeft;
 		bool blocking; //refers to the state, if the Player is blocking at the moment, this is true
+		bool jumping; //if the player is jumping this is true
 		std::string collision_direction; //can be "NONE", "LEFT" or "RIGHT"
 		void renderUnflipped();
 		void renderFlipped();
