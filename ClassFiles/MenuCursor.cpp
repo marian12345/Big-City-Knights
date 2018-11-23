@@ -28,8 +28,8 @@ void MenuCursor::tick() {
 	//tick
 	ticked++;
 	tick2++;
-	int distance = 400;
-	int move_after_ticks = 20;
+	int distance = 800;
+	int move_after_ticks = 200;
 	if ((ticked >= move_after_ticks)) {
 		if (left == true) {
 			appearance.x -= 1;
