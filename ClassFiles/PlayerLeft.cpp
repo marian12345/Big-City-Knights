@@ -134,7 +134,7 @@ void PlayerLeft::restart() {
 
 	//Set size and position
 	appearance.x = 50;
-	appearance.y = window_size_h - (window_size_h / 4);
+	appearance.y = window_size_h - (window_size_h / 5);
 	appearance.w = 128;
 	appearance.h = 128;
 	
