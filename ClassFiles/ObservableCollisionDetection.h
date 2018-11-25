@@ -5,6 +5,8 @@
 #define OBSERVABLE_H
 #include "Observable.h"
 #endif
+#include <array>
+#include <string>
 
 class ObservableCollisionDetection : public Observable {
 	private:

@@ -320,6 +320,15 @@ void Game::update() {
 		}
 	}
 
+	///////////////////////////////////////FINDING DEAD PLAYERS
+	//Check if a player is dead
+	for (int i = 0; i < lvl_elements.size(); i++) {
+		if (lvl_elements.at(i)->isDead().compare("DEADPLAYER") == 0) {
+			printf("FoundDEADPLAYER\n");
+		}
+	}
+	////////////////////////////////////
+
 	//tick players
 	tick();
 };

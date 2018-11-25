@@ -266,8 +266,8 @@ void Player::update(int collided_with, int own_collider, SDL_Rect rec) {
 		Mixer::getInstance()->play(Mixer::HURT);
 		break;
 	case SWORD:
+		changeStateTo(HURT);
 		if (own_collider != SWORD) {
-			changeStateTo(HURT);
 			healthbar->takeDamage(200);
 			Mixer::getInstance()->play(Mixer::HURT);
 		}

@@ -61,6 +61,7 @@
     <ClInclude Include="..\ClassFiles\PlayerLeft.h" />
     <ClInclude Include="..\ClassFiles\PlayerRight.h" />
     <ClInclude Include="..\ClassFiles\Window.h" />
+    <ClInclude Include="LevelTexture.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C5001393-8DE0-4751-AC42-F62840954244}</ProjectGuid>

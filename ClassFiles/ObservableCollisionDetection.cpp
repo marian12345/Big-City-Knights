@@ -10,7 +10,7 @@ void ObservableCollisionDetection::checkCollisions() {
 		//First loop - Grab list x
 		for (int i1 = 0; i1 < obs_list.size()-1; i1++) { 
 			std::vector<SDL_Rect> list_x = obs_list.at(i1)->getColliders();
-			//Second Loop - to go through all the rectangles in the list x
+			//Second Loop - to go through all the rectangles in list x
 			for (int i2 = 0; i2 < list_x.size(); i2++) {
 				//Only the Player class has 2 colliders, therefore i2 won't count higher than 2
 				//Third loop - Grab next list y 
