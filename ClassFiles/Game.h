@@ -7,6 +7,10 @@
 #include "Menu.h"
 #endif
 #include "vector"
+#ifndef LEVELTEXTURE_H
+#define LEVELTEXTURE_H
+#include "LevelTexture.h"
+#endif
 
 class Game
 {

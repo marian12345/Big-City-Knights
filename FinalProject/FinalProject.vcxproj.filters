@@ -72,6 +72,9 @@
     <ClCompile Include="..\ClassFiles\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\ClassFiles\LevelTexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ClassFiles\AbstractTexture.h">
@@ -137,7 +140,7 @@
     <ClInclude Include="..\ClassFiles\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LevelTexture.h">
+    <ClInclude Include="..\ClassFiles\LevelTexture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

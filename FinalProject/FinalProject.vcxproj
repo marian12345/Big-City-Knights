@@ -26,6 +26,7 @@
     <ClCompile Include="..\ClassFiles\Collider.cpp" />
     <ClCompile Include="..\ClassFiles\Game.cpp" />
     <ClCompile Include="..\ClassFiles\Healthbar.cpp" />
+    <ClCompile Include="..\ClassFiles\LevelTexture.cpp" />
     <ClCompile Include="..\ClassFiles\main.cpp" />
     <ClCompile Include="..\ClassFiles\Menu.cpp" />
     <ClCompile Include="..\ClassFiles\MenuControlsTexture.cpp" />
@@ -48,6 +49,7 @@
     <ClInclude Include="..\ClassFiles\Game.h" />
     <ClInclude Include="..\ClassFiles\Healthbar.h" />
     <ClInclude Include="..\ClassFiles\LevelElementInterface.h" />
+    <ClInclude Include="..\ClassFiles\LevelTexture.h" />
     <ClInclude Include="..\ClassFiles\Menu.h" />
     <ClInclude Include="..\ClassFiles\MenuControlsTexture.h" />
     <ClInclude Include="..\ClassFiles\MenuCursor.h" />
@@ -61,7 +63,6 @@
     <ClInclude Include="..\ClassFiles\PlayerLeft.h" />
     <ClInclude Include="..\ClassFiles\PlayerRight.h" />
     <ClInclude Include="..\ClassFiles\Window.h" />
-    <ClInclude Include="LevelTexture.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C5001393-8DE0-4751-AC42-F62840954244}</ProjectGuid>

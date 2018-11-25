@@ -325,6 +325,9 @@ void Game::update() {
 	for (int i = 0; i < lvl_elements.size(); i++) {
 		if (lvl_elements.at(i)->isDead().compare("DEADPLAYER") == 0) {
 			printf("FoundDEADPLAYER\n");
+			SDL_Color color1 = { 213, 0, 28, 255 };
+			LevelTexture *lt = new LevelTexture("Press ESC to Restart the Game","assets / fonts / PlayfairDisplay - BlackItalic.ttf", 48, color1);
+			//Idee ist nun die LevelTexture in lvl_elements einzufügen und rauszunehmen wenn esc gedrückt wurde
 		}
 	}
 	////////////////////////////////////
