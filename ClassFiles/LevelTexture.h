@@ -16,6 +16,8 @@
 
 class LevelTexture : public LevelElementInterface, public MenuTexture {
 private:
+	int alpha;
+	bool alpha_increasing;
 public:
 	LevelTexture(std::string text, std::string fontpath, int fontsize, SDL_Color color);
 	//LevelElementInterface

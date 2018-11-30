@@ -303,6 +303,17 @@ void Game::tick() {
 };
 
 void Game::restart() {
+	//Erase old level items
+	for (int i = 0; i < lvl_elements.size(); i++) {
+		if ((lvl_elements.at(i)->getType().compare("BOTTLE") == 0) || (lvl_elements.at(i)->getType().compare("LEVELTEXTURE") == 0)) {
+			printf("%s", lvl_elements.at(i)->getType().c_str());
+			printf(" deleted...\n");
+			LevelElementInterface* tmp = lvl_elements.at(i);
+			lvl_elements.erase(lvl_elements.begin() + i);
+		}
+	}
+
+	//
 	for (int i = 0; i < lvl_elements.size(); i++) {
 		lvl_elements.at(i)->restart();
 	}
@@ -320,17 +331,24 @@ void Game::update() {
 		}
 	}
 
-	///////////////////////////////////////FINDING DEAD PLAYERS
-	//Check if a player is dead
+	//Check if a player is dead - if yes create a LevelTexture - if it hasn't been created yet
 	for (int i = 0; i < lvl_elements.size(); i++) {
 		if (lvl_elements.at(i)->isDead().compare("DEADPLAYER") == 0) {
-			printf("FoundDEADPLAYER\n");
-			SDL_Color color1 = { 213, 0, 28, 255 };
-			LevelTexture *lt = new LevelTexture("Press ESC to Restart the Game","assets / fonts / PlayfairDisplay - BlackItalic.ttf", 48, color1);
-			//Idee ist nun die LevelTexture in lvl_elements einzufügen und rauszunehmen wenn esc gedrückt wurde
+			bool level_texture_existing = false; // This LevelTexture tells the players that they have to press ESC to Restart the Game
+			
+			for (int i = 0; i < lvl_elements.size(); i++) {
+				if (lvl_elements.at(i)->getType().compare("LEVELTEXTURE") == 0)
+					level_texture_existing = true;
+			}
+
+			if (level_texture_existing == false) {
+				SDL_Color color1 = { 19, 249, 24, 255 };
+				LevelTexture *lt = new LevelTexture("- Press  ESC  to  Restart  the  Game -", "assets/fonts/Butcherman-Regular.ttf", 48, color1);
+				lt->loadMedia();
+				lvl_elements.push_back(lt);
+			}
 		}
 	}
-	////////////////////////////////////
 
 	//tick players
 	tick();

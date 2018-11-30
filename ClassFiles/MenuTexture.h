@@ -8,7 +8,7 @@
 #include "SDL_ttf.h"
 
 class MenuTexture : public MenuItemInterface{
-	private:
+	protected:
 		SDL_Texture* texture;
 		std::string text;
 		std::string fontpath;
