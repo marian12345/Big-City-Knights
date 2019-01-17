@@ -230,7 +230,6 @@ bool Menu::init() {
 	//Set up values for Menu Items
 	std::string fontpath1 = "assets/fonts/PlayfairDisplay-Bold.ttf";
 	std::string fontpath2 = "assets/fonts/PlayfairDisplay-Italic.ttf";
-	//std::string fontpath2 = "assets/fonts/PressStart2P-Regular.ttf";
 	MenuTexture* menutx = NULL;
 	SDL_Color color1 = { 213, 0, 28, 255 };
 	SDL_Color color2 = { 255, 184, 81, 255 };

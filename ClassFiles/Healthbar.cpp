@@ -80,13 +80,12 @@ void Healthbar::render() {
 bool Healthbar::takeDamage(double damage) {
 	bool dead = false;
 
-	if (damage >= stats[HEALTH]) {
+	if (damage >= stats[HEALTH] ) {
 		stats[HEALTH] = 0.0;
 		stats[PERCENTAGE] = 0.0;
 		setColor();
 		dead = true;
 		Mixer::getInstance()->play(Mixer::DYING);
-		printf("DYING");
 	}
 	else {
 		stats[HEALTH] -= damage;

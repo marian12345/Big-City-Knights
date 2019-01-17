@@ -306,8 +306,6 @@ void Game::restart() {
 	//Erase old level items
 	for (int i = 0; i < lvl_elements.size(); i++) {
 		if ((lvl_elements.at(i)->getType().compare("BOTTLE") == 0) || (lvl_elements.at(i)->getType().compare("LEVELTEXTURE") == 0)) {
-			printf("%s", lvl_elements.at(i)->getType().c_str());
-			printf(" deleted...\n");
 			LevelElementInterface* tmp = lvl_elements.at(i);
 			lvl_elements.erase(lvl_elements.begin() + i);
 		}
@@ -334,7 +332,7 @@ void Game::update() {
 	//Check if a player is dead - if yes create a LevelTexture - if it hasn't been created yet
 	for (int i = 0; i < lvl_elements.size(); i++) {
 		if (lvl_elements.at(i)->isDead().compare("DEADPLAYER") == 0) {
-			bool level_texture_existing = false; // This LevelTexture tells the players that they have to press ESC to Restart the Game
+			bool level_texture_existing = false; // This LevelTexture tells the players that they must press ESC to Restart the Game
 			
 			for (int i = 0; i < lvl_elements.size(); i++) {
 				if (lvl_elements.at(i)->getType().compare("LEVELTEXTURE") == 0)
