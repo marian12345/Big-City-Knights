@@ -1,0 +1,7 @@
+1. Download the Game and unpack it
+
+2. Go to Big-City-Knights\x64\Release folder and right click on the FinalProject.exe
+
+3. Copy the FinalProject.exe to the Big-City-Knights\FinalProject folder
+
+4. Double click on the FinalProject.exe to start the game
