@@ -9,4 +9,6 @@
 4. Double click on the FinalProject.exe to start the game
 
 
-> Currently only working on Windows 64-Bit 
+
+
+> Currently only working on Windows 64-Bit !
