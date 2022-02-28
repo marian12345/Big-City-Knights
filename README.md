@@ -11,4 +11,4 @@
 
 
 
-> Currently only working on Windows 64-Bit !
+> Only working on Windows 64-Bit !
