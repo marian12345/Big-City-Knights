@@ -1,4 +1,4 @@
-## How To Start The Game
+### How To Start The Game
 
 1. Download the Game and unpack it
 
@@ -9,6 +9,6 @@
 4. Double click on the FinalProject.exe to start the game
 
 
-
+### Requirements
 
 > Only working on Windows 64-Bit
