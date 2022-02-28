@@ -7,3 +7,6 @@
 3. Copy the FinalProject.exe into the folder Big-City-Knights\FinalProject
 
 4. Double click on the FinalProject.exe to start the game
+
+
+> Currently only working on Windows 64-Bit 
