@@ -1,3 +1,5 @@
+A 2D Pixel Art multiplayer video game written in C++ using SDL
+
 ### How To Start The Game
 
 1. Download the Game and unpack it
